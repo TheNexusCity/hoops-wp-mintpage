@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#mintbtn {
+    width:300px;
+    height: 3.3vw;
+    padding: 0px !important;
+    margin: 0px 0 2vw !important;
+    border-radius: 1vw;
+    background: rgba(255,0,0,0.30000001192092896);
+    border: solid 0.3vw red;
+    color: rgb(100,100,100);
+    font-size: 1.5vw;
+    font-weight: bold;
+  }
+  #numberopt {
+    text-align: center;
+    font-size: 3vw !important;
+  }
+  #tokencount {
+    background: rgba(255,255,255,0.30000001192092896);
+    border: 0.15vw solid rgba(255,255,255,1);
+    border-radius: 0.5vw;
+    color: rgb(100,100,100);
+    text-align: center;
+    width: 3vw;
+    height: 3vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    margin: 0 1vw;
+    font-size: 1.5vw !important;
+    display: inline !important;
+  }
+  #selectcount {
+    display: inline !important;
+    color: rgb(100,100,100);
+    font-size: 1.6vw;
+  }
+  #selectcount:hover {
+    cursor: pointer;
+  }
+  #countdiv {
+    width: 100%;
+    margin: auto;
+  }
+  
