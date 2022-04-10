@@ -10,7 +10,11 @@
   margin:2em;
   z-index: 1000;
 }
-
+#centerdiv {
+  margin: auto;
+  width: 200px;
+  text-align: center;
+}
 #mintbtn {
     width:200px;
     height: 3.3vw;
