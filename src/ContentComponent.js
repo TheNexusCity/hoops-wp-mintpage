@@ -81,7 +81,7 @@ const ContentComponent = () => {
                                          :
                           <div>
                             <div id="countdiv">
-                              {TotalSupply}/10000 Minted
+                              {TotalSupply} / 10000 Minted
                             </div>
                             <div id="countdiv">
                               Mint your hoops now.
