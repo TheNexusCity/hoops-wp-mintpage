@@ -12,11 +12,11 @@ const ContentComponent = () => {
   })
   const increase = () => {
     let number = quantity + 1
-    if(quantity < 25) setQuantity(number)
+    if (quantity < 25) setQuantity(number)
   }
   const decrease = () => {
     let number = quantity - 1
-    if(quantity > 1) setQuantity(number)
+    if (quantity > 1) setQuantity(number)
   }
   const mintNFT = async () => {
     try {
@@ -36,8 +36,8 @@ const ContentComponent = () => {
       });
       alert("Transaction successful.");
     } catch (error) {
-      console.log("error",error)
-      if(error.toString().search("insufficient funds") !== -1) alert("Insufficient funds.")
+      console.log("error", error)
+      if (error.toString().search("insufficient funds") !== -1) alert("Insufficient funds.")
       else alert("transaction failed");
     }
     return false;
@@ -45,13 +45,19 @@ const ContentComponent = () => {
 
   return (
     <React.Fragment>
-      <div id="headersection">
-            <div id="countdiv">
-            <p id="selectcount" onClick={decrease}>  - </p>
-              <div id="tokencount">{quantity}</div>
-                <p id="selectcount" onClick={increase}>+</p>
-            </div>
-              <button id="mintbtn" onClick={mintNFT}>Mint</button>
+      <div id="mintsection">
+        <div id="countdiv">
+          10/10,000 Minted
+        </div>
+        <div id="countdiv">
+          Mint your hoops now.
+        </div>
+        <div id="countdiv">
+          <div id="selectcount" onClick={decrease}>-</div>
+          <div id="tokencount">{quantity}</div>
+          <div id="selectcount" onClick={increase}>+</div>
+        </div>
+        <button id="mintbtn" onClick={mintNFT}>Mint</button>
       </div>
     </React.Fragment>
   )

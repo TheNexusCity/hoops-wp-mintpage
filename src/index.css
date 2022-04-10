@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+#mintsection {
+  width: 100%;
+  display: block;
+  padding: 3em;
+}
+
 #mintbtn {
-    width:300px;
+    width:200px;
     height: 3.3vw;
     padding: 0px !important;
     margin: 0px 0 2vw !important;

@@ -13409,7 +13409,7 @@ module.exports = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n#mintbtn {\n    width:300px;\n    height: 3.3vw;\n    padding: 0px !important;\n    margin: 0px 0 2vw !important;\n    border-radius: 1vw;\n    background: rgba(255,0,0,0.30000001192092896);\n    border: solid 0.3vw red;\n    color: rgb(100,100,100);\n    font-size: 1.5vw;\n    font-weight: bold;\n  }\n  #numberopt {\n    text-align: center;\n    font-size: 3vw !important;\n  }\n  #tokencount {\n    background: rgba(255,255,255,0.30000001192092896);\n    border: 0.15vw solid rgba(255,255,255,1);\n    border-radius: 0.5vw;\n    color: rgb(100,100,100);\n    text-align: center;\n    width: 3vw;\n    height: 3vw;\n    padding-left: 1.5vw;\n    padding-right: 1.5vw;\n    margin: 0 1vw;\n    font-size: 1.5vw !important;\n    display: inline !important;\n  }\n  #selectcount {\n    display: inline !important;\n    color: rgb(100,100,100);\n    font-size: 1.6vw;\n  }\n  #selectcount:hover {\n    cursor: pointer;\n  }\n  #countdiv {\n    width: 100%;\n    margin: auto;\n  }\n  ", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n#mintsection {\n  width: 100%;\n  display: block;\n  padding: 3em;\n}\n\n#mintbtn {\n    width:200px;\n    height: 3.3vw;\n    padding: 0px !important;\n    margin: 0px 0 2vw !important;\n    border-radius: 1vw;\n    background: rgba(255,0,0,0.30000001192092896);\n    border: solid 0.3vw red;\n    color: rgb(100,100,100);\n    font-size: 1.5vw;\n    font-weight: bold;\n  }\n  #numberopt {\n    text-align: center;\n    font-size: 3vw !important;\n  }\n  #tokencount {\n    background: rgba(255,255,255,0.30000001192092896);\n    border: 0.15vw solid rgba(255,255,255,1);\n    border-radius: 0.5vw;\n    color: rgb(100,100,100);\n    text-align: center;\n    width: 3vw;\n    height: 3vw;\n    padding-left: 1.5vw;\n    padding-right: 1.5vw;\n    margin: 0 1vw;\n    font-size: 1.5vw !important;\n    display: inline !important;\n  }\n  #selectcount {\n    display: inline !important;\n    color: rgb(100,100,100);\n    font-size: 1.6vw;\n  }\n  #selectcount:hover {\n    cursor: pointer;\n  }\n  #countdiv {\n    width: 100%;\n    margin: auto;\n  }\n  ", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["Z"] = (___CSS_LOADER_EXPORT___);
 
@@ -32281,15 +32281,19 @@ var ContentComponent = function ContentComponent() {
   }();
 
   return /*#__PURE__*/react.createElement(react.Fragment, null, /*#__PURE__*/react.createElement("div", {
-    id: "headersection"
+    id: "mintsection"
   }, /*#__PURE__*/react.createElement("div", {
     id: "countdiv"
-  }, /*#__PURE__*/react.createElement("p", {
+  }, "10/10,000 Minted"), /*#__PURE__*/react.createElement("div", {
+    id: "countdiv"
+  }, "Mint your hoops now."), /*#__PURE__*/react.createElement("div", {
+    id: "countdiv"
+  }, /*#__PURE__*/react.createElement("div", {
     id: "selectcount",
     onClick: decrease
-  }, "  - "), /*#__PURE__*/react.createElement("div", {
+  }, "-"), /*#__PURE__*/react.createElement("div", {
     id: "tokencount"
-  }, quantity), /*#__PURE__*/react.createElement("p", {
+  }, quantity), /*#__PURE__*/react.createElement("div", {
     id: "selectcount",
     onClick: increase
   }, "+")), /*#__PURE__*/react.createElement("button", {
