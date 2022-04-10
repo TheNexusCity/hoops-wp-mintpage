@@ -10,7 +10,7 @@ const ContentComponent = () => {
   const [connectedFlag, setConnectedWalletFlag] = useState(null)
   const [mintPrice, setMintPrice] = useState(0.0824)
   const [isMintOpen, SetMintOpenFlag] = useState(false)
-  const [TotalSupply, setTotalSupply] = useState(10000)
+  const [TotalSupply, setTotalSupply] = useState(0)
   const injected = new InjectedConnector({
     supportedChainIds: [1, 4],
   })
@@ -81,7 +81,7 @@ const ContentComponent = () => {
                                          :
                           <div>
                             <div id="countdiv">
-                              {TotalSupply} / 10000 Minted
+                              <span id="tokennumber">{TotalSupply} / 10000  </span>Minted
                             </div>
                             <div id="countdiv">
                               Mint your hoops now.
