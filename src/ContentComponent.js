@@ -2,11 +2,12 @@ import { useWeb3React } from '@web3-react/core'
 import { InjectedConnector } from '@web3-react/injected-connector'
 import { ethers } from 'ethers';
 import { CONTRACT } from "./config";
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 const ContentComponent = () => {
   const { activate, deactivate, library, account } = useWeb3React()
   const [quantity, setQuantity] = useState(1)
+  const [availableSupply, setAvailableSupply] = useState(10000)
   const injected = new InjectedConnector({
     supportedChainIds: [1, 5],
   })
@@ -43,11 +44,22 @@ const ContentComponent = () => {
     return false;
   };
 
+  useEffect(() => {
+  (async () => {
+    const signer = (new ethers.providers.Web3Provider(window.ethereum)).getSigner();
+    const contract = new ethers.Contract(CONTRACT.address, CONTRACT.abi, signer);
+    // get the 
+    const supply = await contract.availableSuply();
+
+    setAvailableSupply(supply.toNumber());
+  })()
+  }, [])
+
   return (
     <React.Fragment>
       <div id="mintsection">
         <div id="countdiv">
-          10/10,000 Minted
+          {availableSupply}/10000 Minted
         </div>
         <div id="countdiv">
           Mint your hoops now.
