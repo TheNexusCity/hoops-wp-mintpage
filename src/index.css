@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 #mintsection {
+  min-height:300px;
   width: 100%;
   display: block;
   padding: 3em;
+  margin:2em;
+  z-index: 1000;
 }
 
 #mintbtn {
