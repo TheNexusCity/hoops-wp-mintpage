@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react"
 const ContentComponent = () => {
   const { activate, deactivate, library, account } = useWeb3React()
   const [quantity, setQuantity] = useState(1)
-  const [availableSupply, setAvailableSupply] = useState(10000)
+  const [TotalSupply, setTotalSupply] = useState(10000)
   const injected = new InjectedConnector({
     supportedChainIds: [1, 5],
   })
@@ -49,9 +49,9 @@ const ContentComponent = () => {
     const signer = (new ethers.providers.Web3Provider(window.ethereum)).getSigner();
     const contract = new ethers.Contract(CONTRACT.address, CONTRACT.abi, signer);
     // get the 
-    const supply = await contract.availableSupply();
+    const supply = await contract.totalSupply();
 
-    setAvailableSupply(supply.toNumber());
+    setTotalSupply(supply.toNumber());
   })()
   }, [])
 
@@ -59,7 +59,7 @@ const ContentComponent = () => {
     <React.Fragment>
       <div id="mintsection">
         <div id="countdiv">
-          {availableSupply}/10000 Minted
+          {TotalSupply}/10000 Minted
         </div>
         <div id="countdiv">
           Mint your hoops now.
