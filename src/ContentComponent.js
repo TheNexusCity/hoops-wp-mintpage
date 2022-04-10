@@ -49,7 +49,7 @@ const ContentComponent = () => {
     const signer = (new ethers.providers.Web3Provider(window.ethereum)).getSigner();
     const contract = new ethers.Contract(CONTRACT.address, CONTRACT.abi, signer);
     // get the 
-    const supply = await contract.availableSuply();
+    const supply = await contract.availableSupply();
 
     setAvailableSupply(supply.toNumber());
   })()

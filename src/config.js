@@ -120,7 +120,7 @@ export const CONTRACT = {
       },
       {
          "inputs": [],
-         "name": "availableSuply",
+         "name": "availableSupply",
          "outputs": [
             {
                "internalType": "uint256",
