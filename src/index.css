@@ -23,6 +23,20 @@
     font-size: 1.5vw;
     font-weight: bold;
   }
+#connectwalletbtn {
+  justify-items: center;
+
+    width:200px;
+    height: 3.3vw;
+    padding: 0px !important;
+    margin: 0px 0 2vw !important;
+    border-radius: 1vw;
+    background: rgba(255,0,0,0.30000001192092896);
+    border: solid 0.3vw red;
+    color: rgb(100,100,100);
+    font-size: 1.5vw;
+    font-weight: bold;
+  }
   #numberopt {
     text-align: center;
     font-size: 3vw !important;
