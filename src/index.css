@@ -28,10 +28,9 @@
     font-weight: 800;
     text-transform: uppercase;
     font-family: "montserrat-black-new", Sans-serif;
+    cursor: pointer;
   }
 #connectwalletbtn {
-  /* justify-items: center; */
-
     width: 15vw;
     height: 3.8vw;
     padding: 0px !important;
@@ -43,10 +42,12 @@
     font-weight: 800;
     text-transform: uppercase;
     font-family: "montserrat-black-new", Sans-serif;
+    cursor: pointer;
   }
   #numberopt {
     text-align: center;
     font-size: 3vw !important;
+    cursor: pointer;
   }
   #tokencount {
     background: rgba(255,255,255,0.30000001192092896);
@@ -61,11 +62,13 @@
     margin: 0 1vw;
     font-size: 2vw !important;
     display: inline !important;
+    cursor: pointer;
   }
   #selectcount {
     display: inline !important;
     color: rgb(100,100,100);
     font-size: 2.1vw;
+    cursor: pointer;
   }
   #selectcount:hover {
     cursor: pointer;
@@ -77,10 +80,12 @@
     font-size: 2.4vw;
     color: #C39A69;
     font-weight: 900;
+    cursor: pointer;
   }
   #tokennumber {
     color: #a06114;
     font-size: 2.4vw !important;
-     padding: 0px;
+    padding: 0px;
+    cursor: pointer;
   }
   
