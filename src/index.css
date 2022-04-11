@@ -3,89 +3,103 @@
 @tailwind utilities;
 
 #mintsection {
-  min-height:300px;
+  min-height: 400px;
   width: 100%;
   display: block;
-  /* padding: 3em; */
-  /* margin:2em; */
+  background-image: url("./assets/Hero3.webp");
   padding-top: 3em;
+  background-size: 100% 100%;
   z-index: 1000;
 }
+
 #centerdiv {
   margin: auto;
   width: 50vw;
   text-align: center;
 }
+
 #mintbtn {
-    width: 15vw;
-    height: 3.8vw;
-    padding: 0px !important;
-    margin: 10px 0 2vw !important;
-    border-radius: 0.5vw;
-    background: #c39a69;
-    color: white;
-    font-size: 2.1vw;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-family: "montserrat-black-new", Sans-serif;
-    cursor: pointer;
-  }
+  width: 15vw;
+  height: 3.8vw;
+  padding: 0px !important;
+  margin: 10px 0 2vw !important;
+  border-radius: 0.5vw;
+  background: #c39a69;
+  color: white;
+  font-size: 2.1vw;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "montserrat-black-new", Sans-serif;
+  cursor: pointer;
+  transition: transform .6s;
+}
+
 #connectwalletbtn {
-    width: 15vw;
-    height: 3.8vw;
-    padding: 0px !important;
-    margin: 0px 0 2vw !important;
-    border-radius: 0.5vw;
-    background: #c39a69;
-    color: white;
-    font-size: 2.1vw;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-family: "montserrat-black-new", Sans-serif;
-    cursor: pointer;
-  }
-  #numberopt {
-    text-align: center;
-    font-size: 3vw !important;
-    cursor: pointer;
-  }
-  #tokencount {
-    background: rgba(255,255,255,0.30000001192092896);
-    border: 0.15vw solid rgba(255,255,255,1);
-    border-radius: 0.5vw;
-    color: rgb(100,100,100);
-    text-align: center;
-    width: 3vw;
-    height: 3vw;
-    padding-left: 1.5vw;
-    padding-right: 1.5vw;
-    margin: 0 1vw;
-    font-size: 2vw !important;
-    display: inline !important;
-    cursor: pointer;
-  }
-  #selectcount {
-    display: inline !important;
-    color: rgb(100,100,100);
-    font-size: 2.1vw;
-    cursor: pointer;
-  }
-  #selectcount:hover {
-    cursor: pointer;
-  }
-  #countdiv {
-    width: 100%;
-    padding: 5px;
-    margin: auto;
-    font-size: 2.4vw;
-    color: #C39A69;
-    font-weight: 900;
-    cursor: pointer;
-  }
-  #tokennumber {
-    color: #a06114;
-    font-size: 2.4vw !important;
-    padding: 0px;
-    cursor: pointer;
-  }
-  
+  width: 15vw;
+  height: 3.8vw;
+  padding: 0px !important;
+  margin: 0px 0 2vw !important;
+  border-radius: 0.5vw;
+  background: #c39a69;
+  color: white;
+  font-size: 2.1vw;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "montserrat-black-new", Sans-serif;
+  cursor: pointer;
+  transition: transform .6s;
+}
+
+#mintbtn:hover, #connectwalletbtn:hover {
+  transform: scale(1.2)
+}
+
+#numberopt {
+  text-align: center;
+  font-size: 3vw !important;
+  cursor: pointer;
+}
+
+#tokencount {
+  background: rgba(255, 255, 255, 0.30000001192092896);
+  border: 0.15vw solid rgba(255, 255, 255, 1);
+  border-radius: 0.5vw;
+  color: rgb(100, 100, 100);
+  text-align: center;
+  width: 3vw;
+  height: 3vw;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  margin: 0 1vw;
+  font-size: 2vw !important;
+  display: inline !important;
+  cursor: pointer;
+}
+
+#selectcount {
+  display: inline !important;
+  color: rgb(100, 100, 100);
+  font-size: 2.1vw;
+  cursor: pointer;
+}
+
+#selectcount:hover {
+  cursor: pointer;
+}
+
+#countdiv {
+  width: 100%;
+  padding: 5px;
+  margin: auto;
+  font-size: 2.4vw;
+  color: #C39A69;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+#tokennumber {
+  color: #a06114;
+  font-size: 2.4vw !important;
+  padding: 0px;
+  cursor: pointer;
+}
