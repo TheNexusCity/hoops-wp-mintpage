@@ -64,7 +64,6 @@ const ContentComponent = () => {
   })()
   }, [])
   useEffect(() => {
-    console.log("aa",account)
     setConnectedWalletFlag(account == undefined ? null : account)
   })
 
