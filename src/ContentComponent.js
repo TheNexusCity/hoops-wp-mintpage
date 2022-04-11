@@ -9,7 +9,7 @@ const ContentComponent = () => {
   const [quantity, setQuantity] = useState(1)
   const [connectedFlag, setConnectedWalletFlag] = useState(null)
   const [mintPrice, setMintPrice] = useState(0.0824)
-  const [isMintOpen, SetMintOpenFlag] = useState(false)
+  const [isMintOpen, SetMintOpenFlag] = useState(true)
   const [TotalSupply, setTotalSupply] = useState(0)
   const injected = new InjectedConnector({
     supportedChainIds: [1, 4],
@@ -46,6 +46,7 @@ const ContentComponent = () => {
   const connectwallet = async () => {
     try {
       await activate(injected)
+
     } catch (ex) {
       console.log(ex)
     }
@@ -59,13 +60,11 @@ const ContentComponent = () => {
     const mintOpen = await contract.isMintOpen();
 
     setTotalSupply(supply.toNumber());
+    setConnectedWalletFlag(account == undefined ? null : account)
     SetMintOpenFlag(mintOpen);
     setMintPrice(parseFloat(tokenPrice / Math.pow(10, 18)));
   })()
-  }, [])
-  useEffect(() => {
-    setConnectedWalletFlag(account == undefined ? null : account)
-  })
+  }, [account])
 
   return (
     <React.Fragment>
