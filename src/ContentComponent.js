@@ -73,7 +73,7 @@ const ContentComponent = () => {
       <div id="mintsection">
         <div id="centerdiv">
         {
-          isMintOpen ? <div id="closedtitle">mint is currently closed</div>
+          !isMintOpen ? <div id="countdiv">Mint is currently closed</div>
                      : 
                      <div>
                         { 
