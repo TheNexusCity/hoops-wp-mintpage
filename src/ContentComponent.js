@@ -55,11 +55,16 @@ const ContentComponent = () => {
   (async () => {
     const signer = (new ethers.providers.Web3Provider(window.ethereum)).getSigner();
     const contract = new ethers.Contract(CONTRACT.address, CONTRACT.abi, signer);
-    const supply = await contract.totalSupply();
+
+    
     const tokenPrice = await contract.getMintPrice();
     const mintOpen = await contract.isMintOpen();
+    if(mintOpen){
 
-    setTotalSupply(supply.toNumber());
+      const supply = await contract.totalSupply();
+      
+      setTotalSupply(supply.toNumber());
+    }
     setConnectedWalletFlag(account == undefined ? null : account)
     SetMintOpenFlag(mintOpen);
     setMintPrice(parseFloat(tokenPrice / Math.pow(10, 18)));
@@ -79,7 +84,9 @@ const ContentComponent = () => {
                                          :
                           <div>
                             <div id="countdiv">
-                              <span id="tokennumber">{TotalSupply} / 10000  </span>Minted
+                              { totalSupply &&
+                                <span id="tokennumber">{TotalSupply} / 10000 Minted </span>
+                              }
                             </div>
                             <div id="countdiv">
                               Mint your hoops now.
