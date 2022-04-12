@@ -58,6 +58,8 @@ const ContentComponent = () => {
 
     
     const tokenPrice = await contract.getMintPrice();
+    setMintPrice(parseFloat(tokenPrice / Math.pow(10, 18)));
+
     const mintOpen = await contract.isMintOpen();
     if(mintOpen){
 
@@ -66,10 +68,16 @@ const ContentComponent = () => {
       setTotalSupply(supply.toNumber());
     }
     setConnectedWalletFlag(account == undefined ? null : account)
-    SetMintOpenFlag(mintOpen);
-    setMintPrice(parseFloat(tokenPrice / Math.pow(10, 18)));
   })()
   }, [account])
+
+  useEffect(() => {
+    const signer = (new ethers.providers.Web3Provider(window.ethereum)).getSigner();
+    const contract = new ethers.Contract(CONTRACT.address, CONTRACT.abi, signer);
+    contract.isMintOpen().then (mintOpen => {
+      SetMintOpenFlag(mintOpen);
+    })
+}, [account, connectedFlag])
 
   return (
     <React.Fragment>
