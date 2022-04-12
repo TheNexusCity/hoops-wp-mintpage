@@ -99,6 +99,8 @@ const ContentComponent = () => {
                             <div id="countdiv">
                               Mint your hoops now.
                             </div>
+                            <span id="tokennumber"> Mint Price: .0824 ETH </span>
+
                             <div id="countdiv">
                               <div id="selectcount" onClick={decrease}>-</div>
                               <div id="tokencount">{quantity}</div>
