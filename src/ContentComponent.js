@@ -12,7 +12,7 @@ const ContentComponent = () => {
   const [isMintOpen, SetMintOpenFlag] = useState(true)
   const [TotalSupply, setTotalSupply] = useState(0)
   const injected = new InjectedConnector({
-    supportedChainIds: [1, 4],
+    supportedChainIds: [1],
   })
   const increase = () => {
     let number = quantity + 1
