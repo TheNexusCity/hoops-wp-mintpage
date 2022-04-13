@@ -45,7 +45,9 @@ const ContentComponent = () => {
 
   const connectwallet = async () => {
     try {
-      await activate(injected)
+      await activate(injected).catch(error => {
+        window.alert("You need a web3 wallet extension or a browser with web3 enabled to mint. We recommend Metamask.")
+      })
 
     } catch (ex) {
       console.log(ex)
